@@ -3,6 +3,7 @@ using Business.Validation.FluentValidation;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using FluentValidation.Results;
+using System;
 using System.Web.Mvc;
 
 namespace MvcProject.Controllers
@@ -30,6 +31,11 @@ namespace MvcProject.Controllers
             var messageValues = messageManager.GetById(id);
             return View(messageValues);
         }
+        public ActionResult GetSendboxMessageDetails(int id)
+        {
+            var messageValues = messageManager.GetById(id);
+            return View(messageValues);
+        }
         [HttpPost]
         public ActionResult Add(Message message)
         {
@@ -37,8 +43,9 @@ namespace MvcProject.Controllers
             ValidationResult result = messageValidator.Validate(message);
             if (result.IsValid)
             {
+                message.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 messageManager.Add(message);
-                return RedirectToAction("GetAllInbox");
+                return RedirectToAction("Sendbox");
             }
             else
             {

@@ -97,6 +97,14 @@
     <Compile Include="Migrations\202202071900023_mig_addmessageclass.designer.cs">
       <DependentUpon>202202071900023_mig_addmessageclass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202101243235_mig_contactadd.cs" />
+    <Compile Include="Migrations\202202101243235_mig_contactadd.designer.cs">
+      <DependentUpon>202202101243235_mig_contactadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202101628575_mig_addmessage_isdraft.cs" />
+    <Compile Include="Migrations\202202101628575_mig_addmessage_isdraft.designer.cs">
+      <DependentUpon>202202101628575_mig_addmessage_isdraft.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -131,6 +139,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202071900023_mig_addmessageclass.resx">
       <DependentUpon>202202071900023_mig_addmessageclass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202101243235_mig_contactadd.resx">
+      <DependentUpon>202202101243235_mig_contactadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202101628575_mig_addmessage_isdraft.resx">
+      <DependentUpon>202202101628575_mig_addmessage_isdraft.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
