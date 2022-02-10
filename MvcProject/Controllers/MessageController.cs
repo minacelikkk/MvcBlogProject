@@ -25,6 +25,11 @@ namespace MvcProject.Controllers
         {
             return View();
         }
+        public ActionResult GetInboxMessageDetails(int id)
+        {
+            var messageValues = messageManager.GetById(id);
+            return View(messageValues);
+        }
         [HttpPost]
         public ActionResult Add(Message message)
         {
