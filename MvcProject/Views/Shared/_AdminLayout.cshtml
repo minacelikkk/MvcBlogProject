@@ -41,17 +41,19 @@
 
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-                        <li class="nav-item has-treeview ">
-                            <a href="/AdminCategory/Index" class="nav-link ">
-                                <i class="nav-icon fas fa-align-justify"></i>
-                                <p>
-                                    Kategoriler
-                                </p>
-                            </a>
-                        </li>
+                        @if (User.IsInRole("B"))
+                        {
+                            <li class="nav-item has-treeview ">
+                                <a href="/AdminCategory/Index/" class="nav-link ">
+                                    <i class="nav-icon fas fa-align-justify"></i>
+                                    <p>
+                                        Kategoriler
+                                    </p>
+                                </a>
+                            </li>
+                        }
                         <li class="nav-item">
-                            <a href="/Heading/Index" class="nav-link">
+                            <a href="/Heading/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Başlıklar
@@ -59,7 +61,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="/Writer/Index" class="nav-link">
+                            <a href="/Writer/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Yazarlar
@@ -97,7 +99,7 @@
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="/About/Index" class="nav-link">
+                            <a href="/About/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-info-circle"></i>
                                 <p>
                                     Hakkımızda
@@ -105,18 +107,10 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="/Contact/Index" class="nav-link">
+                            <a href="/Contact/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
                                     İletişim & Mesajlar
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Yazılar
                                 </p>
                             </a>
                         </li>
@@ -129,7 +123,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="/Gallery/Index/" class="nav-link">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>
                                     Galeri
@@ -137,7 +131,7 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/ErrorPage/Page404/" class="nav-link">
                                 <i class="nav-icon fas fa-file"></i>
                                 <p>
                                     Hata Sayfaları

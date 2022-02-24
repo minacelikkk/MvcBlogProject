@@ -11,6 +11,7 @@ namespace MvcProject.Controllers
     public class MessageController : Controller
     {
         MessageManager messageManager = new MessageManager(new EfMessageDal());
+        [Authorize]
         public ActionResult Inbox()
         {
             var messageValue = messageManager.GetAllInbox();

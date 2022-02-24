@@ -16,10 +16,12 @@ C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migration
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_contentstatusadd.resources
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_headingstatusadd.resources
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_addmessageclass.resources
+C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_contactadd.resources
+C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_addmessage_isdraft.resources
+C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.migaddimage_file.resources
+C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_admin_table.resources
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.cache
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.pdb
-C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_contactadd.resources
-C:\Users\minav\source\repos\MvcProject\DataAccess\obj\Debug\DataAccess.Migrations.mig_addmessage_isdraft.resources

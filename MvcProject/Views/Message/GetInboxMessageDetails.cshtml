@@ -32,17 +32,12 @@
                         <div class="card-body p-0">
                             <h5>Konu:@Html.DisplayFor(c => c.Subject)</h5>
                             <br />
-                            <h5>Mail:@Html.DisplayFor(c => c.SenderMail)</h5>
-                            <div class="mailbox-read-info">
-                                <h5></h5>
-                                <h6>
-                                    From: support@adminlte.io
-                                    <span class="mailbox-read-time float-right">@Model.MessageDate.ToString("dd-MMM-yyyy")</span>
-                                </h6>
-                            </div>
-                            <div class="mailbox-read-message">
-                                <p>@Html.DisplayFor(c => c.MessageContent)</p>
-                            </div>
+                            <h5>
+                                Mail:@Html.DisplayFor(c => c.SenderMail)
+                            </h5>
+                        </div>
+                        <div class="mailbox-read-message">
+                            <p>@Html.DisplayFor(c => c.MessageContent)</p>
                         </div>
                     </div>
                 </div>
