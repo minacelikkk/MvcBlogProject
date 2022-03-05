@@ -11,15 +11,16 @@ namespace MvcProject.Controllers
     public class MessageController : Controller
     {
         MessageManager messageManager = new MessageManager(new EfMessageDal());
+        MessageValidator messageValidator = new MessageValidator();
         [Authorize]
-        public ActionResult Inbox()
+        public ActionResult Inbox(string mail)
         {
-            var messageValue = messageManager.GetAllInbox();
+            var messageValue = messageManager.GetAllInbox(mail);
             return View(messageValue);
         }
-        public ActionResult Sendbox()
+        public ActionResult Sendbox(string mail)
         {
-            var messageValue = messageManager.GetAllSendbox();
+            var messageValue = messageManager.GetAllSendbox(mail);
             return View(messageValue);
         }
         [HttpGet]
@@ -40,7 +41,6 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult Add(Message message)
         {
-            MessageValidator messageValidator = new MessageValidator();
             ValidationResult result = messageValidator.Validate(message);
             if (result.IsValid)
             {

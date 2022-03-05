@@ -60,6 +60,8 @@ C:\Users\minav\source\repos\MvcProject\MvcProject\bin\FluentValidation.dll
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Newtonsoft.Json.dll
+C:\Users\minav\source\repos\MvcProject\MvcProject\bin\PagedList.dll
+C:\Users\minav\source\repos\MvcProject\MvcProject\bin\PagedList.Mvc.dll
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Helpers.dll
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Mvc.dll
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Optimization.dll
@@ -77,6 +79,9 @@ C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Entities.dll.config
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\EntityFramework.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\EntityFramework.SqlServer.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\FluentValidation.xml
+C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Newtonsoft.Json.xml
+C:\Users\minav\source\repos\MvcProject\MvcProject\bin\PagedList.xml
+C:\Users\minav\source\repos\MvcProject\MvcProject\bin\PagedList.Mvc.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Helpers.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Mvc.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Optimization.xml
@@ -84,7 +89,6 @@ C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.Razor.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.WebPages.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.WebPages.Deployment.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\System.Web.WebPages.Razor.xml
-C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Newtonsoft.Json.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Antlr3.Runtime.pdb
 C:\Users\minav\source\repos\MvcProject\MvcProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\minav\source\repos\MvcProject\MvcProject\obj\Debug\MvcProjectUI.csproj.AssemblyReference.cache

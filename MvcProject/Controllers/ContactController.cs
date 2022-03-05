@@ -20,11 +20,11 @@ namespace MvcProject.Controllers
             var contactValues = contactManager.GetById(id);
             return View(contactValues);
         }
-        public PartialViewResult MessageListMenu()
+        public PartialViewResult MessageListMenu(string mail)
         {
             ViewBag.ContactCount = contactManager.GetAll().Count;
-            ViewBag.InboxMessageCount = messageManager.GetAllInbox().Count;
-            ViewBag.SendboxMessageCount = messageManager.GetAllSendbox().Count;
+            ViewBag.InboxMessageCount = messageManager.GetAllInbox(mail).Count;
+            ViewBag.SendboxMessageCount = messageManager.GetAllSendbox(mail).Count;
             return PartialView();
         }
     }

@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -52,15 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
     <Compile Include="Abstract\IImageFileDal.cs" />
+    <Compile Include="Abstract\ILoginDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
+    <Compile Include="Abstract\ISkillDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\EntityFramework\EfAdminDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfLoginDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfAboutDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfContactDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfContentDal.cs" />
@@ -68,7 +76,9 @@
     <Compile Include="Concrete\EntityFramework\EfCategoryDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfImageFileDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMessageDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfSkillDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfWriterDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfWriterLoginDal.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Migrations\202201280912181_mig1.cs" />
@@ -114,6 +124,26 @@
     <Compile Include="Migrations\202202221651084_mig_admin_table.cs" />
     <Compile Include="Migrations\202202221651084_mig_admin_table.designer.cs">
       <DependentUpon>202202221651084_mig_admin_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202241522252_mig_logintable_add.cs" />
+    <Compile Include="Migrations\202202241522252_mig_logintable_add.designer.cs">
+      <DependentUpon>202202241522252_mig_logintable_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202241800330_mig2.cs" />
+    <Compile Include="Migrations\202202241800330_mig2.designer.cs">
+      <DependentUpon>202202241800330_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202241845274_mig4.cs" />
+    <Compile Include="Migrations\202202241845274_mig4.designer.cs">
+      <DependentUpon>202202241845274_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203011526161_mig_messagetableupdate.cs" />
+    <Compile Include="Migrations\202203011526161_mig_messagetableupdate.designer.cs">
+      <DependentUpon>202203011526161_mig_messagetableupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203011913201_mig_addskilltable.cs" />
+    <Compile Include="Migrations\202203011913201_mig_addskilltable.designer.cs">
+      <DependentUpon>202203011913201_mig_addskilltable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +191,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202221651084_mig_admin_table.resx">
       <DependentUpon>202202221651084_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202241522252_mig_logintable_add.resx">
+      <DependentUpon>202202241522252_mig_logintable_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202241800330_mig2.resx">
+      <DependentUpon>202202241800330_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202241845274_mig4.resx">
+      <DependentUpon>202202241845274_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203011526161_mig_messagetableupdate.resx">
+      <DependentUpon>202203011526161_mig_messagetableupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203011913201_mig_addskilltable.resx">
+      <DependentUpon>202203011913201_mig_addskilltable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace MvcProject.Controllers
@@ -15,6 +16,11 @@ namespace MvcProject.Controllers
         {
             var contentValues = contentManager.GetAllByHeadingId(id);
             return View(contentValues);
+        }
+        public ActionResult GetAllContent(string p)
+        {
+            var contentValues = contentManager.GetAll(p);
+            return View(contentValues.ToList());
         }
     }
 }

@@ -8,6 +8,7 @@ C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\EntityFramework.dll
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\FluentValidation.dll
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\itextsharp.dll
+C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\Newtonsoft.Json.dll
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\SVG.dll
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\DataAccess.pdb
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\DataAccess.dll.config
@@ -17,6 +18,7 @@ C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\EntityFramework.xml
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\FluentValidation.xml
 C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\itextsharp.xml
+C:\Users\minav\source\repos\MvcProject\Business\bin\Debug\Newtonsoft.Json.xml
 C:\Users\minav\source\repos\MvcProject\Business\obj\Debug\Business.csproj.AssemblyReference.cache
 C:\Users\minav\source\repos\MvcProject\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 C:\Users\minav\source\repos\MvcProject\Business\obj\Debug\Business.csproj.CopyComplete

@@ -24,14 +24,19 @@ namespace Business.Concrete
             _contentDal.Delete(content);
         }
 
-        public List<Content> GetAll()
+        public List<Content> GetAll(string p)
         {
-            return _contentDal.GetAll();
+            return _contentDal.GetAll(c=>c.ContentText.Contains(p));
         }
 
         public List<Content> GetAllByHeadingId(int headingId)
         {
             return _contentDal.GetAll(h => h.HeadingId == headingId);
+        }
+
+        public List<Content> GetAllByWriter(int writerId)
+        {
+            return _contentDal.GetAll(w => w.WriterId == writerId);
         }
 
         public Content GetById(int id)
