@@ -4,7 +4,11 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@{ string color = "";}
+@{ string categoryColor = "";
+    string statusColor = "";
+    string button = "";
+    string buttonColor = "";
+    string status = "";}
 <!DOCTYPE html>
 <html>
 <body class="hold-transition sidebar-mini">
@@ -21,6 +25,16 @@
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
+                </div>
+                <div class="card-tools">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="Başlıklarda Ara">
+                        <div class="input-group-append">
+                            <div class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
                 <div class="card-body p-0">
                     <table class="table table-striped projects">
@@ -41,51 +55,50 @@
                                 <th style="width: 8%" class="text-center">
                                     Kategori
                                 </th>
-                                <th style="width: 20%">
+                                <th style="width: 30%">
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
-                                //switch (item)
-                                //{
-                                //    case item.Category.CategoryName =="Tiyatro":
-                                //        color = "btn btn-primary btn-sm";
-                                //    break;
-                                //    case item.Category.CategoryName == "Spor":
-                                //        color = "btn btn-info btn-sm";
-                                //    break;
-                                //    case item.Category.CategoryName == "Yazılım":
-                                //        color = "btn btn-danger btn-sm";
-                                //    break;
-                                //    case item.Category.CategoryName == "Eğitim":
-                                //        color = "btn btn-danger btn-sm";
-                                //    break;
-                                //}
                                 if (item.Category.CategoryName == "Tiyatro")
                                 {
-                                    color= "btn btn-primary btn-sm";
+                                    categoryColor = "btn btn-primary btn-sm";
                                 }
                                 if (item.Category.CategoryName == "Kitap")
                                 {
-                                    color = "btn btn-info btn-sm";
+                                    categoryColor = "btn btn-info btn-sm";
                                 }
                                 if (item.Category.CategoryName == "Yazılım")
                                 {
-                                    color = "btn btn-danger btn-sm";
+                                    categoryColor = "btn btn-danger btn-sm";
                                 }
                                 if (item.Category.CategoryName == "Spor")
                                 {
-                                    color = "btn btn-danger btn-sm";
+                                    categoryColor = "btn btn-danger btn-sm";
                                 }
                                 if (item.Category.CategoryName == "Film")
                                 {
-                                    color = "btn btn-warning btn-sm";
+                                    categoryColor = "btn btn-warning btn-sm";
                                 }
                                 if (item.Category.CategoryName == "Dizi")
                                 {
-                                    color = "btn btn-success btn-sm";
+                                    categoryColor = "btn btn-success btn-sm";
+                                }
+                                if (item.HeadingStatus)
+                                {
+                                    status = "Aktif";
+                                    statusColor = "badge badge-primary";
+                                    button = "Pasif Yap";
+                                    buttonColor = "btn-danger";
+                                }
+                                else
+                                {
+                                    status = "Pasif";
+                                    statusColor = "badge badge-secondary";
+                                    button = "Aktif Yap";
+                                    buttonColor = "btn-success";
                                 }
                                 <tr>
                                     <td>
@@ -97,7 +110,7 @@
                                         </a>
                                         <br />
                                         <small>
-                                           @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
+                                            @(((DateTime)item.HeadingDate).ToString("dd-MMM-yyyy"))
                                         </small>
                                     </td>
                                     <td>
@@ -108,12 +121,12 @@
                                         </ul>
                                     </td>
                                     <td>
-                                        @item.HeadingStatus
+                                        <p class="@statusColor">@status</p>
                                     </td>
                                     <td class="project-state">
-                                        <span class="@color">@item.Category.CategoryName</span>
+                                        <span class="@categoryColor">@item.Category.CategoryName</span>
                                     </td>
-                                    <td class="project-actions text-right">
+                                    <td class="project-actions text-center">
                                         <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingId">
                                             <i class="fas fa-folder">
                                             </i>
@@ -128,6 +141,11 @@
                                             <i class="fas fa-trash">
                                             </i>
                                             Sil
+                                        </a>
+                                        <a class="btn btn-success btn-sm" href="/Heading/HeadingStatusUpdate/@item.HeadingId">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            @button
                                         </a>
                                     </td>
                                 </tr>

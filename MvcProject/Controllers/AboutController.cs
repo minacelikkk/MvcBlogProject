@@ -1,10 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcProject.Controllers
@@ -32,7 +28,19 @@ namespace MvcProject.Controllers
         {
             return PartialView();
         }
-
-
+        public ActionResult AboutStatusUpdate(int id)
+        {
+            var admin = aboutManager.GetById(id);
+            if (admin.AboutStatus)
+            {
+                admin.AboutStatus = false;
+            }
+            else
+            {
+                admin.AboutStatus = true;
+            }
+            aboutManager.Update(admin);
+            return RedirectToAction("Index");
+        }
     }
 }

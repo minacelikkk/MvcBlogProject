@@ -14,7 +14,6 @@ namespace MvcProject.Controllers
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
-
         public ActionResult Index()
         {
             var headingValues = headingManager.GetAll();
@@ -76,6 +75,20 @@ namespace MvcProject.Controllers
             var headingValue = headingManager.GetById(id);
             headingValue.HeadingStatus = false;
             headingManager.Delete(headingValue);
+            return RedirectToAction("Index");
+        }
+        public ActionResult HeadingStatusUpdate(int id)
+        {
+            var headingStatus=headingManager.GetById(id);
+            if (headingStatus.HeadingStatus)
+            {
+                headingStatus.HeadingStatus = false;
+            }
+            else
+            {
+                headingStatus.HeadingStatus = true;
+            }
+            headingManager.Update(headingStatus);
             return RedirectToAction("Index");
         }
     }

@@ -1,0 +1,54 @@
+﻿@using Entities.Concrete
+@model List<Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    string status = "";
+    string statusColor = "";
+}
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Mail</th>
+        <th>Yetki</th>
+        <th>Durum</th>
+        <th>Aktif/Pasif Yap</th>
+        <th>Yetkisini Değiştir</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.AdminStatus)
+        {
+            status = "Pasif Yap";
+            statusColor = "btn-secondary";
+        }
+        else
+        {
+            status = "Aktif Yap";
+            statusColor = "btn-success";
+        }
+        <tr>
+            <th>@item.AdminId</th>
+            <td>@item.AdminUserName</td>
+            <td>@item.AdminRole</td>
+            <td>
+                @if (item.AdminStatus)
+                {
+                    <span class="badge badge-success">Aktif</span>
+                }
+                else
+                {
+                    <span class="badge badge-secondary">Pasif</span>
+                }
+            </td>
+            <td><a href="/Authorization/AdminStatusUpdate/@item.AdminId" class="btn @statusColor">@status</a></td>
+            <td><a href="/Authorization/Update/@item.AdminId" class="btn btn-warning">Yetkisini Değiştir</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Authorization/AddAdmin" class="btn btn-info">Yeni Admin Tanımla</a>
+
+

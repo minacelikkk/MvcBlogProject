@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "FormSubmit";
+}
+<head>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<h2>FormSubmit</h2>
+@using (Html.BeginForm("FormSubmit", "Captcha", FormMethod.Post))
+{
+    <div class="g-recaptcha" data-sitekey="6LdO8bAeAAAAAPuTkDI5yyRe95wFaQnTntUIU_n4"></div>
+    <input type="submit" value="Submit" />
+    <br />
+    @TempData["Message"]
+}
+

@@ -19,8 +19,16 @@ namespace MvcProject.Controllers
         }
         public ActionResult GetAllContent(string p)
         {
-            var contentValues = contentManager.GetAll(p);
-            return View(contentValues.ToList());
+            if (p == null)
+            {
+                var contentValues = contentManager.GetAll();
+                return View(contentValues);
+            }
+            else
+            {
+                var contentValues = contentManager.GetAll(p);
+                return View(contentValues.ToList());
+            }
         }
     }
 }

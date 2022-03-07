@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İSTATİSTİKLER</h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card p-3 mb-2 bg-success text-white" style="width: 18rem;">
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">Toplam Kategori Sayısı</h5><br />
+                <h5>@ViewBag.totalNumberOfCategories </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card p-3 mb-2 bg-primary text-white" style="width: 18rem;">
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">Yazılım Kategorisi Başlık Sayısı</h5><br />
+                <h5>@ViewBag.softwareCategoryTitleNumber </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card p-3 mb-2 bg-info text-white" style="width: 18rem;">
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">Yazar Adında "A" Harfi Geçen Yazar Sayısı</h5><br />
+                <h5>@ViewBag.writerFirstNameSortByA </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card p-3 mb-2 bg-danger text-white" style="width: 18rem;">
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">En Fazla Başlığa Sahip Kategori Adı</h5><br />
+                <h5>@ViewBag.categoryNameWithTheMostTitles </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card p-3 mb-2 bg-success text-white" style="width: 18rem;">
+            <div class="card-body" style="text-align:center">
+                <h5 class="card-title">Kategoriler Tablosundaki Aktif Kategori Sayısı</h5><br />
+                <h5>@ViewBag.activeCategories </h5>
+            </div>
+        </div>
+    </div>
+</div>

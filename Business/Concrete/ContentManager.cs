@@ -29,6 +29,11 @@ namespace Business.Concrete
             return _contentDal.GetAll(c=>c.ContentText.Contains(p));
         }
 
+        public List<Content> GetAll()
+        {
+            return _contentDal.GetAll();
+        }
+
         public List<Content> GetAllByHeadingId(int headingId)
         {
             return _contentDal.GetAll(h => h.HeadingId == headingId);

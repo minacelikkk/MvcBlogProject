@@ -57,7 +57,6 @@ namespace MvcProject.Controllers
             FormsAuthentication.SignOut();
             Session.Abandon();
             return RedirectToAction("Headings", "Default");
-
         }
     }
 }

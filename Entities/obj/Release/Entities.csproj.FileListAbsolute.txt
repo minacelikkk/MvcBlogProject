@@ -1,0 +1,14 @@
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\Entities.dll.config
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\Entities.dll
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\Entities.pdb
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\EntityFramework.dll
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\Newtonsoft.Json.dll
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\EntityFramework.xml
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\minav\source\repos\MvcProject\Entities\bin\Release\Newtonsoft.Json.xml
+C:\Users\minav\source\repos\MvcProject\Entities\obj\Release\Entities.csproj.AssemblyReference.cache
+C:\Users\minav\source\repos\MvcProject\Entities\obj\Release\Entities.csproj.CoreCompileInputs.cache
+C:\Users\minav\source\repos\MvcProject\Entities\obj\Release\Entities.csproj.CopyComplete
+C:\Users\minav\source\repos\MvcProject\Entities\obj\Release\Entities.dll
+C:\Users\minav\source\repos\MvcProject\Entities\obj\Release\Entities.pdb

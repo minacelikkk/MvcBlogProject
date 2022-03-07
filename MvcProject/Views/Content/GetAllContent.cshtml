@@ -5,10 +5,11 @@
     ViewBag.Title = "GetAllContent";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<br />
 @using (Html.BeginForm("GetAllContent", "Content", FormMethod.Post)) {
     <p>
         Aranacak Kelimeyi Girin:@Html.TextBox("p")
-        <input type="submit"/ value="Ara">
+        <input type="submit" class="control" value="Ara" >
     </p>
 }
 @foreach (var item in Model)
